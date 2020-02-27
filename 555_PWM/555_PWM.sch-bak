@@ -195,7 +195,7 @@ F 3 "~" H 3200 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 1850 3350 1850
+	3650 1850 3450 1850
 $Comp
 L Device:R R3
 U 1 1 5E5868AC
@@ -229,7 +229,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 2750 3200 3050
 Wire Wire Line
-	3200 3050 3950 3050
+	3200 3050 3450 3050
 $Comp
 L Device:R R5
 U 1 1 5E588FC2
@@ -294,19 +294,8 @@ Wire Wire Line
 	3850 900  3550 900 
 Wire Wire Line
 	3550 900  3550 950 
-$Comp
-L Device:Q_PMOS_DGS Q1
-U 1 1 5E590E7D
-P 5100 1950
-F 0 "Q1" H 5000 1800 50  0000 L CNN
-F 1 "Q_PMOS_DGS" H 4650 2150 50  0000 L CNN
-F 2 "" H 5300 2050 50  0001 C CNN
-F 3 "~" H 5100 1950 50  0001 C CNN
-	1    5100 1950
-	1    0    0    1   
-$EndComp
 Wire Wire Line
-	5200 1750 5200 1300
+	5200 1750 5200 1700
 Wire Wire Line
 	5200 1300 4350 1300
 Connection ~ 4350 1300
@@ -326,7 +315,7 @@ $EndComp
 Wire Wire Line
 	5450 2300 5200 2300
 Wire Wire Line
-	5200 2300 5200 2150
+	5200 2300 5200 2200
 Wire Wire Line
 	5450 2400 5200 2400
 Wire Wire Line
@@ -378,4 +367,61 @@ Wire Wire Line
 Connection ~ 3200 1300
 Connection ~ 3200 3050
 Connection ~ 2600 2300
+$Comp
+L Device:C C4
+U 1 1 5E5A7FEA
+P 3450 2300
+F 0 "C4" H 3565 2346 50  0000 L CNN
+F 1 "0.1uF" H 3565 2255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 3488 2150 50  0001 C CNN
+F 3 "~" H 3450 2300 50  0001 C CNN
+	1    3450 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2150 3450 1850
+Connection ~ 3450 1850
+Wire Wire Line
+	3450 1850 3350 1850
+Wire Wire Line
+	3450 2450 3450 3050
+Connection ~ 3450 3050
+Wire Wire Line
+	3450 3050 3950 3050
+$Comp
+L Device:Q_PMOS_GDS Q1
+U 1 1 5E5ABAA4
+P 5100 1950
+F 0 "Q1" H 4950 1850 50  0000 L CNN
+F 1 "Q_PMOS_GDS" H 4650 2100 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5300 2050 50  0001 C CNN
+F 3 "~" H 5100 1950 50  0001 C CNN
+	1    5100 1950
+	1    0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5E5AFFA2
+P 5400 1950
+F 0 "D1" V 5354 2029 50  0000 L CNN
+F 1 "1N4148" V 5445 2029 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5400 1775 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5400 1950 50  0001 C CNN
+	1    5400 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 2100 5400 2200
+Wire Wire Line
+	5400 2200 5200 2200
+Connection ~ 5200 2200
+Wire Wire Line
+	5200 2200 5200 2150
+Wire Wire Line
+	5400 1800 5400 1700
+Wire Wire Line
+	5400 1700 5200 1700
+Connection ~ 5200 1700
+Wire Wire Line
+	5200 1700 5200 1300
 $EndSCHEMATC
